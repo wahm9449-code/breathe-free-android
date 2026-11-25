@@ -14,7 +14,8 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - uses: android-actions/setup-android@v3
+      - run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses 
+            || true
       - run: npm install
       - run: npx cap add android
       - run: npx --yes @capacitor/assets generate --android

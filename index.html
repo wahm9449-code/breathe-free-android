@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نَفَس جديد – Breathe Free</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap">
+<style>
+:root{--bg:#eefaf6;--cd:#fff;--tx:#12343b;--mu:#5d7a80;--g:#14b08a;--b:#2a86d6;--g2:#d8f4ea;--ln:#d5eae4;--rd:#e5484d;box-sizing:border-box;padding-top:var(--safe-area-inset-top,env(safe-area-inset-top,0px));padding-bottom:var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1d21;--cd:#14302f;--tx:#e6f5f1;--mu:#93b5b0;--g2:#1a463f;--ln:#23423e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1d21;--cd:#14302f;--tx:#e6f5f1;--mu:#93b5b0;--g2:#1a463f;--ln:#23423e;color-scheme:dark}
+html{scroll-padding-top:var(--safe-area-inset-top,env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%}
+body{font-family:Cairo,system-ui,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--tx);line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:var(--safe-area-inset-top,env(safe-area-inset-top,0px));background:var(--bg);z-index:10}
+button{font-family:inherit}
+.app{max-width:480px;margin:auto;padding:0 14px 150px}
+header{display:flex;align-items:center;gap:8px;padding:12px 0}
+h1{font-size:1.2rem;flex:1;line-height:1.3}h1 small{display:block;font-size:.72rem;color:var(--mu);font-weight:400}
+h2{font-size:1.2rem;margin:8px 0}h3{margin:10px 0 4px}
+.chip{background:var(--g2);color:var(--g);font-weight:700;border-radius:20px;padding:2px 12px}
+.ib{border:0;background:var(--g2);border-radius:50%;width:38px;height:38px;font-size:1.1rem;cursor:pointer}
+.card{background:var(--cd);border-radius:18px;padding:14px;margin:10px 0;box-shadow:0 2px 10px #0000000f}
+.hero{background:linear-gradient(135deg,#14b08a,#2a86d6);color:#fff;display:flex;gap:10px;align-items:center}
+.hero.c{flex-direction:column}.hero .bar{width:100%}
+.bub{background:#ffffff2b;border-radius:14px;padding:6px 12px;font-size:.88rem;margin-top:6px;cursor:pointer}
+.mas{animation:br 3.2s ease-in-out infinite;flex:none}.mas svg{display:block}
+@keyframes br{50%{transform:scale(1.07) translateY(-4px)}}
+.btn{display:block;width:100%;border:0;border-radius:14px;padding:12px 16px;margin:8px 0;font-size:1rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--g),var(--b));cursor:pointer}
+.btn.alt{background:var(--cd);color:var(--tx);border:2px solid var(--ln)}
+.btn.sm{display:inline-block;width:auto;padding:5px 14px;font-size:.85rem;margin:4px 0}
+.rdb{background:linear-gradient(135deg,#e5484d,#f08a4b)}
+.bar{height:10px;background:var(--g2);border-radius:9px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--g),var(--b));transition:width .5s}
+.sp{display:flex;justify-content:space-between;align-items:center;gap:8px}.row{display:flex;align-items:center;gap:10px}.row b{flex:1}.row.ok{opacity:.55}
+.ic{font-size:1.7rem}.mu,small{color:var(--mu)}.c{text-align:center}.big{font-size:2.6rem}
+.gm{display:flex;gap:12px;align-items:center;width:100%;text-align:start;border:0;color:var(--tx);cursor:pointer;font-size:1rem}.gm.sq{justify-content:center;text-align:center;font-weight:700}
+.grid2,.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.q{font-size:1.15rem;font-weight:700;text-align:center;padding:22px 14px}
+.opt,.cd{display:block;width:100%;text-align:start;background:var(--cd);border:2px solid var(--ln);border-radius:14px;padding:12px;margin:8px 0;font-size:1rem;color:var(--tx);cursor:pointer}
+.cd{margin:0;min-height:80px;text-align:center;font-size:.85rem;padding:6px}
+.good{background:#d4f5e4!important;border-color:#14b08a!important;color:#0b4d36!important}.bad{background:#fde1e1!important;border-color:#e5484d!important;color:#7a1d1f!important}
+.hud{display:flex;justify-content:space-around;font-size:1.1rem;margin:8px 0}
+.seg{display:flex;background:var(--g2);border-radius:14px;padding:4px;margin:8px 0}.seg button{flex:1;border:0;background:none;padding:8px;border-radius:11px;color:var(--tx);cursor:pointer;font-size:.95rem}.seg .on{background:var(--cd);font-weight:700;box-shadow:0 1px 6px #0002}
+.bk{background:none;border:0;color:var(--b);font-weight:700;cursor:pointer;padding:8px 0;font-size:1rem}
+summary{display:flex;align-items:center;gap:8px;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}
+em{font-style:normal;background:var(--g2);color:var(--g);border-radius:20px;padding:0 10px;font-size:.75rem;font-weight:700;margin-inline-start:auto}
+ul,ol{padding-inline-start:22px;margin-top:6px}li{margin:4px 0}
+.bd{text-align:center}.lk{opacity:.5;filter:grayscale(1)}hr{border:0;border-top:1px solid var(--ln);margin:10px 0}
+a{color:var(--b)}
+textarea,input[type=time]{width:100%;border:2px solid var(--ln);border-radius:12px;padding:8px;font:inherit;background:var(--bg);color:var(--tx);margin:6px 0}input[type=time]{width:auto}input[type=range]{width:100%;accent-color:var(--g);margin:12px 0}
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;display:flex;background:var(--cd);border-top:1px solid var(--ln);padding:6px 4px calc(6px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)));z-index:20}nav button{flex:1;border:0;background:none;color:var(--mu);font-size:.72rem;display:flex;flex-direction:column;align-items:center;cursor:pointer}nav b{font-size:1.35rem}nav .on{color:var(--g);font-weight:700}
+.fab{position:fixed;left:max(12px,calc(50% - 228px));bottom:calc(76px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)));z-index:21;background:var(--rd);color:#fff;border:0;border-radius:30px;padding:9px 14px;font-weight:700;box-shadow:0 4px 14px #0005;cursor:pointer}
+#ov{position:fixed;inset:0;background:#0008;display:flex;align-items:flex-end;justify-content:center;z-index:30}#ov[hidden]{display:none}
+.sheet{background:var(--cd);width:100%;max-width:480px;border-radius:22px 22px 0 0;padding:18px 16px calc(18px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)));max-height:88%;overflow:auto;position:relative}
+.x{position:absolute;top:10px;left:12px;border:0;background:var(--g2);color:var(--tx);border-radius:50%;width:32px;height:32px;cursor:pointer}
+.bc{width:120px;height:120px;margin:34px auto;border-radius:50%;background:radial-gradient(circle,var(--b),var(--g))}
+.note{background:#fff3cd;color:#664d03;border-radius:12px;padding:10px;font-size:.85rem;margin-top:10px}
+#ts{position:fixed;top:calc(12px + var(--safe-area-inset-top,env(safe-area-inset-top,0px)));left:50%;transform:translate(-50%,-140px);background:#12343b;color:#fff;padding:9px 16px;border-radius:30px;z-index:40;transition:transform .3s;max-width:92%;text-align:center;font-size:.9rem}#ts.on{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><span style="font-size:1.7rem">🌿</span><h1>نَفَس جديد<small>Breathe Free · <span id="lv"></span></small></h1><span class="chip" id="pt">⭐ 0</span><button class="ib" onclick="go('a')" aria-label="الإشعارات">🔔</button><button class="ib" id="tb" onclick="thm()" aria-label="الوضع الليلي">🌙</button></header>
+<main id="v"></main>
+</div>
+<button class="fab" onclick="help()">🆘 أنا محتاج مساعدة</button>
+<nav>
+<button data-k="h" onclick="go('h')"><b>🏠</b>الرئيسية</button>
+<button data-k="g" onclick="go('g')"><b>🎮</b>ألعاب</button>
+<button data-k="l" onclick="go('l')"><b>📚</b>تعلّم</button>
+<button data-k="c" onclick="go('c')"><b>👥</b>المجتمع</button>
+<button data-k="a" onclick="go('a')"><b>🏆</b>إنجازاتي</button>
+</nav>
+<div id="ov" hidden onclick="if(event.target==this)cm()"><div class="sheet"><button class="x" onclick="cm()" aria-label="إغلاق">✕</button><div id="mb"></div></div></div>
+<div id="ts" role="status"></div>
+<script>
+const $=i=>document.getElementById(i),D=new Date().toISOString().slice(0,10),rm=a=>a[Math.floor(Math.random()*a.length)],sh=a=>[...a].sort(()=>Math.random()-.5),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let S={pts:0,day:D,ch:{},streak:0,last:"",badges:[],posts:[],stat:{},nt:{on:0,t:"20:00",d:""},th:"",nick:"",seed:0,pd:""},R,g={},T,mf,tab=0,cur="h",tm;
+try{Object.assign(S,JSON.parse(localStorage.getItem("nf1")||"{}"))}catch(e){}
+if(S.day!==D){S.day=D;S.ch={}}
+const sv=()=>{try{localStorage.setItem("nf1",JSON.stringify(S))}catch(e){}};
+const CH=[["🌬️","تنفّس بعمق لدقيقة"],["💧","اشرب كوبين من الماء"],["🚶","امشِ 10 دقائق أو مارس رياضة خفيفة"],["💬","تحدّث مع صديق يدعم عاداتك الصحية"],["📝","اكتب سبباً واحداً يجعلك تختار حياة أصحّ"]];
+const FACT=["دخان التبغ يحتوي على أكثر من 7000 مادة كيميائية، نحو 70 منها مسبّبة للسرطان (CDC).","يتسبّب التبغ بأكثر من 7 ملايين وفاة سنوياً، منها نحو 1.6 مليون لغير المدخّنين المعرّضين للدخان (WHO).","بعد 20 دقيقة فقط من آخر سيجارة، يبدأ نبض القلب وضغط الدم بالانخفاض.","لا يوجد مستوى آمن للتعرّض لدخان التبغ، حتى لمن يجلس بجوار المدخّن (WHO).","النيكوتين يسبّب الإدمان، والدعم من الأسرة والمختصين يرفع فرص الإقلاع.","السجائر الإلكترونية ليست آمنة، وغالباً تحتوي نيكوتين يسبّب الإدمان خصوصاً للمراهقين.","كل يوم بلا تدخين يمنح رئتيك فرصة للتعافي 🌿"];
+const MSG=["أهلاً! أنا «نَفَس»، رفيقك في رحلة صحية 🌿","رئتاك تقول لك: شكراً على كل نفس نقي 💚","اليوم فرصة جديدة، وأنت قادر! ✨","خطوة صغيرة اليوم = فرق كبير غداً 🚀","اشرب ماء وخذ نفساً عميقاً 💧"];
+const NM=["صحتك تستحق فرصة جديدة! 🌿","كل خطوة صحية بتفرق 💚","أنت قادر تختار حياة أفضل ✨","نفس عميق الآن… رئتاك تشكرك 🫁"];
+const PR=["أحسنت!","استمر!","رائع!","فخورون بك!","بطل!"];
+const TF=[["التدخين السلبي يضرّ غير المدخّنين أيضاً.",1,"لا يوجد مستوى آمن للتعرّض لدخان التبغ (WHO)."],["السجائر الإلكترونية خالية دائماً من النيكوتين.",0,"كثير منها يحتوي نيكوتين يسبّب الإدمان."],["صحة الجسم تبدأ بالتحسّن بعد الإقلاع بوقت قصير.",1,"ينخفض النبض وضغط الدم خلال دقائق (CDC)."],["سيجارة في المناسبات فقط لا تضرّ أبداً.",0,"حتى التدخين الخفيف يضرّ القلب والأوعية."],["النيكوتين مادة تسبّب الإدمان.",1,"لهذا يحتاج الإقلاع إلى خطة ودعم."],["الشيشة بديل آمن للسجائر.",0,"دخان الشيشة ضارّ ويحمل سموماً كثيرة."]];
+const HU=[["دخان التبغ يضرّ غير المدخّنين",1],["النيكوتين يسبّب الإدمان",1],["الإقلاع يحسّن التنفّس مع الوقت",1],["التدخين يرفع خطر أمراض القلب",1],["الشيشة تحمل سموماً كثيرة",1],["الإلكترونية ليست آمنة للمراهقين",1],["طلب المساعدة يرفع فرص الإقلاع",1],["الرياضة تخفّف الرغبة",1],["سيجارة المناسبات لا تضرّ",0],["الشيشة أخفّ ضرراً",0],["التدخين يخفّف التوتر فعلاً",0],["التدخين يحسّن التركيز",0],["الإلكترونية بلا أي ضرر",0],["الإقلاع مستحيل",0],["المدخّن الخفيف لا يتأثر",0],["لا أحد يتضرّر بدخاني",0]];
+const QZ=[
+{n:"🧠 معرفتك بالمخاطر",q:[["كم مادة كيميائية تقريباً في دخان التبغ؟",["حوالي 70","أكثر من 7000","أقل من 100"],1,"أكثر من 7000 مادة، نحو 70 منها مسبّبة للسرطان."],["أي عضو لا يتأثر بالتدخين؟",["الرئتان","القلب","لا يوجد عضو آمن"],2,"التدخين يؤذي الرئتين والقلب والأوعية وغيرها."],["ما المادة المسبّبة للإدمان في السجائر؟",["النيكوتين","الأكسجين","الفيتامين"],0,"النيكوتين يسبّب الاعتماد ويصعّب الإقلاع."]]},
+{n:"🔍 تصحيح المفاهيم",q:[["السجائر الإلكترونية…",["آمنة تماماً","ليست آمنة وقد تسبّب الإدمان","آمنة للشباب فقط"],1,"غالباً تحتوي نيكوتين ومواد ضارّة."],["الشيشة مقارنة بالسيجارة…",["أخفّ ضرراً","دخانها ضارّ أيضاً","بلا أضرار دون تبغ"],1,"دخان الشيشة يحمل سموماً كثيرة."],["هل التدخين يخفّف التوتر فعلاً؟",["نعم","لا، يهدّئ الانسحاب ثم يزيد الاعتماد","فقط للكبار"],1,"الراحة مؤقتة وسببها تخفيف أعراض الانسحاب."]]},
+{n:"🤝 ضغط الأصدقاء",q:[["صديق عرض عليك سيجارة «مرة وحدة». الأفضل؟",["أجرّب كي لا يزعل","أقول بثقة: لا شكراً","أمسكها فقط"],1,"الرفض الهادئ الواثق يحميك ويكسبك احترامهم."],["أي عبارة أقوى للرفض؟",["«لا شكراً، صحتي أهم»","«ربما لاحقاً»","أصمت وأخجل"],0,"عبارة قصيرة وواضحة دون تبرير طويل."],["إذا استمرّ الضغط؟",["أغيّر المكان وأحكي مع شخص أثق به","أستسلم","أتجاهل نفسي"],0,"الابتعاد وطلب الدعم أذكى حل."]]},
+{n:"🥗 البدائل الصحية",q:[["عند الرغبة المفاجئة؟",["ماء وتنفّس عميق","نصف سيجارة","الجلوس مع المدخّنين"],0,"الرغبة تهدأ غالباً خلال دقائق."],["نشاط يخفّف الرغبة؟",["مشي أو رياضة خفيفة","سهر طويل","قهوة كثيرة"],0,"الحركة تشغلك وتحسّن المزاج."],["الدعم الأنسب في الإقلاع؟",["طبيب أو مختص وأسرة داعمة","وحدي دائماً","أي دواء أسمع عنه"],0,"الأدوية تُستعمل فقط بإشراف الطبيب."]]}];
+const AW=[["🫁","الرئتان والقلب","+7000 مادة في الدخان",["يتلف الأهداب والحويصلات الهوائية فيضعف التنفّس","يرفع خطر سرطان الرئة وانتفاخها والجلطات","يضيّق الأوعية ويجهد القلب"]],["🧠","النيكوتين والإدمان","يصل الدماغ بسرعة",["يسبّب اعتماداً وأعراض انسحاب كالتوتر والرغبة","الإدمان حالة تُعالج بالخطة والدعم، وليس ضعف إرادة"]],["👶","التدخين السلبي","1.6 مليون وفاة سنوياً",["لا مستوى آمن للتعرّض لدخان التبغ","يسبّب للأطفال التهابات الصدر والربو","الحل: بيوت وسيارات خالية من التدخين"]],["🎯","التركيز والصحة العامة","نفَس أقصر ولياقة أقل",["يقلّل اللياقة ويزيد ضيق النفس عند الجهد","الرغبة والانسحاب يشتّتان الانتباه والنوم","يؤثر في الأسنان والبشرة والرائحة"]],["💨","الإلكترونية والشيشة","شيشة: 100–200× دخان سيجارة",["الإلكترونية ليست آمنة للمراهقين وغالباً فيها نيكوتين","جلسة شيشة تعرّضك لدخان أكبر بكثير من سيجارة (WHO)"]]];
+const MY=[["«سيجارة واحدة لا تضر»","حتى التعرّض القليل يؤذي القلب والأوعية."],["«الشيشة أخف»","دخانها ضارّ ويحمل سموماً كثيرة."],["«التدخين يخفف التوتر»","يهدّئ أعراض الانسحاب فقط ثم يزيد الاعتماد."],["«الإلكترونية آمنة تماماً»","ليست خالية من الضرر وقد تسبّب الإدمان."]];
+const TP=[["🚫","ابتعد عن المواقف المحفّزة","غيّر الأماكن والأوقات المرتبطة بالتدخين، كالجلوس مع المدخّنين."],["⚽","مارس هواية أو رياضة","المشي والرياضة الخفيفة تشغلان وقت الرغبة (استشر طبيباً عند وجود مرض)."],["🤝","اصحب من يشجعك","اقضِ وقتك مع من يدعم عاداتك الصحية."],["⏳","اهزم الرغبة بقاعدة الأربعة","أجّل · تنفّس بعمق · اشرب ماء · اشغل نفسك. الرغبة تهدأ غالباً خلال دقائق."],["👨‍👩‍👧","اطلب دعم أسرتك وأصدقائك","أخبر شخصاً تثق به أنك تريد الإقلاع."],["🩺","استعن بطبيب أو مختص","هو من يقيّم حالتك ويحدّد الأنسب. لا تستخدم أدوية دون إشراف طبي."]];
+const LS=[["رئتان سليمتان","الأهداب الصغيرة تنظّف الهواء والأكسجين يصل بسهولة."],["بعد سنوات من التدخين","تتضرّر الأهداب فيظهر سعال مزمن وضيق نفس عند المجهود."],["بعد سنوات أطول","التهابات متكررة وتراجع واضح في اللياقة وتراكم القطران."],["بعد عقود","يرتفع كثيراً خطر انتفاخ الرئة والسرطان وأمراض القلب."]];
+const LR=[["20 دقيقة","ينخفض معدّل النبض وضغط الدم."],["12 ساعة","يعود أول أكسيد الكربون في الدم إلى مستواه الطبيعي."],["أسبوعان – 3 أشهر","تتحسّن الدورة الدموية ووظائف الرئة."],["1 – 9 أشهر","يقلّ السعال وضيق النفس."],["سنة","ينخفض خطر أمراض القلب التاجية إلى نحو النصف."],["5 سنوات","ينخفض خطر السكتة الدماغية بدرجة كبيرة."],["10 سنوات","ينخفض خطر الوفاة بسرطان الرئة إلى نحو النصف (WHO)."],["15 سنة","يقترب خطر أمراض القلب من خطر غير المدخّن."]];
+const LV=[[0,"مبتدئ النفس"],[40,"متنفّس نشيط"],[120,"صديق الصحة"],[250,"محارب العادات"],[450,"بطل النفس النقي"]];
+const B=[["first","🌱","الخطوة الأولى","اجمع أول نقاطك",s=>s.pts>0],["hero","🏆","بطل النفس النقي","أنجز كل تحديات يوم واحد",s=>Object.keys(s.ch).length>=5],["friend","💚","صديق الصحة","اجمع 100 نقطة",s=>s.pts>=100],["warrior","⚔️","محارب العادات السيئة","3 أيام متتالية أو 8 في صيد المعلومات",s=>s.streak>=3||(s.stat.hunt||0)>=8],["myth","🔍","كاشف الخرافات","أجب كل أسئلة صح/خطأ بلا خطأ",s=>s.stat.tf===6],["lung","🫁","مستكشف الرئة","أكمل رحلة الرئة",s=>!!s.stat.lung]];
+const NK=["رفيق الأخضر","نسمة صباح","بطل الهواء","نجم النقاء","صديق البحر"],SEED=[["نسمة صباح","اليوم أنجزت تحدي المشي، أحس بنفس أخف 🌿",12],["بطل الهواء","٣ أيام متتالية! شكراً لكل من شجّعني 💪",9],["نجم النقاء","نصيحتي: اشرب ماء كلما جاءتك الرغبة 💧",7]];
+const BAD=/غبي|غبية|فاشل|حمار|اخرس|تافه|للبيع|أرخص|اشتري|واتساب|ندخّن|ندخن|\d{7,}|@|https?:/i;
+const BK='<button class="bk" onclick="go(\'g\')">→ رجوع</button>';
+const SRC='<p><small>المصادر: <a href="https://www.who.int/news-room/fact-sheets/detail/tobacco" target="_blank" rel="noopener">منظمة الصحة العالمية (WHO)</a>، <a href="https://www.cdc.gov/tobacco/" target="_blank" rel="noopener">CDC</a>، وجمعية السرطان الأمريكية. المعلومات للتوعية ولا تغني عن استشارة الطبيب.</small></p>';
+
+const lung=(d=0,s=150)=>{const c=`hsl(${(350+d*40)%360} ${70-d*55}% ${74-d*42}%)`,sp=[[55,70],[72,122],[140,62],[150,112],[58,134],[152,84]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="9" fill="#2b2220" opacity="${(d*.5).toFixed(2)}"/>`).join("");return `<svg viewBox="0 0 200 170" width="${s}" height="${s*.85}" aria-hidden="true"><path d="M100 4v52M100 56q-22 4-40 20M100 56q22 4 40 20" stroke="#14b08a" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M92 28C58 14 18 56 18 108c0 32 24 52 50 44 20-6 24-26 24-44z" fill="${c}"/><path d="M108 28c34-14 74 28 74 80 0 32-24 52-50 44-20-6-24-26-24-44z" fill="${c}"/>${sp}<circle cx="78" cy="92" r="6" fill="#fff"/><circle cx="122" cy="92" r="6" fill="#fff"/><circle cx="79" cy="93" r="3" fill="#222"/><circle cx="123" cy="93" r="3" fill="#222"/><path d="${d<.5?"M86 110q14 14 28 0":"M86 120q14-14 28 0"}" stroke="#222" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>`};
+function lv(){let i=0;LV.forEach((l,j)=>{if(S.pts>=l[0])i=j});const n=LV[i+1];return{i,name:LV[i][1],pct:n?Math.round((S.pts-LV[i][0])/(n[0]-LV[i][0])*100):100,next:n?n[0]-S.pts:0}}
+function tp(){$("pt").textContent="⭐ "+S.pts;$("lv").textContent=lv().name}
+function tst(m,ms=2200){const e=$("ts");e.textContent=m;e.classList.add("on");clearTimeout(tm);tm=setTimeout(()=>e.classList.remove("on"),ms)}
+function touch(){if(S.last!==D){const y=new Date(Date.now()-864e5).toISOString().slice(0,10);S.streak=S.last===y?S.streak+1:1;S.last=D}}
+function chk(){B.forEach(b=>{if(!S.badges.includes(b[0])&&b[4](S)){S.badges.push(b[0]);setTimeout(()=>tst("🎖️ شارة جديدة: "+b[2],3200),1300)}})}
+function add(n){touch();if(n>0){S.pts+=n;tst("⭐ +"+n+" نقطة — "+rm(PR))}chk();sv();tp()}
+function draw(f){R=f;$("v").innerHTML=f()}
+function D2(h,n){$("v").innerHTML=h;if(!n)scrollTo(0,0)}
+function go(k){cur=k;clearInterval(T);draw(V[k]);scrollTo(0,0);document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.k==k))}
+function M(h,f){mf=f;$("mb").innerHTML=h;$("ov").hidden=false}
+function cm(){$("ov").hidden=true;if(mf){const f=mf;mf=0;f()}}
+
+const chRow=i=>{const d=S.ch[i];return `<div class="row ${d?"ok":""}"><span class="ic">${CH[i][0]}</span><b>${CH[i][1]}</b>${d?"✅":i?`<button class="btn sm" onclick="ch(${i})">تمّ</button>`:`<button class="btn sm" onclick="breathe()">ابدأ</button>`}</div>`};
+const chg=()=>`${BK}<h2>تحدي النفس النقي</h2><p class="mu">كل تحدٍّ = 10 نقاط. أنجز الخمسة لتنال شارة «بطل النفس النقي».</p><div class="card">${CH.map((c,i)=>chRow(i)).join("<hr>")}</div>`;
+function ch(i){if(S.ch[i])return;S.ch[i]=1;add(10);if(R===chg||R===home)draw(R)}
+
+function home(){const l=lv(),i=CH.findIndex((c,j)=>!S.ch[j]);return `<div class="card hero"><div class="mas">${lung(0,104)}</div><div><h2>كل نفس نقي هو خطوة لحياة أفضل</h2><div class="bub" onclick="this.textContent=rm(MSG)">${rm(MSG)}</div></div></div><button class="btn" onclick="go('g')">🚀 ابدأ رحلتك</button><div class="card"><div class="sp"><b>${l.name}</b><span class="chip">⭐ ${S.pts}</span></div><div class="bar"><i style="width:${l.pct}%"></i></div><small>${l.next?"باقي "+l.next+" نقطة للمستوى التالي":"أعلى مستوى! 🏆"} — 🔥 ${S.streak} يوم — 🎖️ ${S.badges.length}/${B.length} شارات</small></div><div class="card"><h3>💡 معلومة اليوم</h3><p>${FACT[new Date().getDate()%FACT.length]}</p></div><div class="card"><h3>🎯 تحدي اليوم</h3>${i<0?"<p>أنجزت كل تحديات اليوم! 🎉</p>":chRow(i)}</div>`}
+
+function games(){const G=[["🫁","رحلة الرئة","استكشف الرئة بين الصحة والتدخين","lgS(0)"],["🌬️","تحدي النفس النقي","عادات يومية بديلة","draw(chg)"],["✅","صح أم خطأ؟","اختبر معلوماتك بسرعة","tfS()"],["🧠","اختبر معلوماتك","أسئلة بنقاط ومكافآت","qzS(0)"],["🎯","صيد المعلومات","اصطد الحقائق وتجنّب الخرافات","huS()"]];return `<h2>الألعاب والتحديات</h2>`+G.map(x=>`<button class="card gm" onclick="${x[3]}"><span class="ic">${x[0]}</span><span><b>${x[1]}</b><br><small>${x[2]}</small></span></button>`).join("")+`<h3>📋 اختبارات قصيرة</h3><div class="grid2">`+QZ.map((q,i)=>`<button class="card gm sq" onclick="qzS(${i})">${q.n}</button>`).join("")+`</div>`}
+
+function tfS(){g={Q:sh(TF),i:0,s:0};tfR()}
+function tfR(){const{Q,i,s}=g;if(i>=Q.length){S.stat.tf=Math.max(S.stat.tf||0,s);chk();sv();return D2(`${BK}<div class="card c"><div class="big">🎉</div><h2>${s} من ${Q.length}</h2><p>${s==Q.length?"كاشف خرافات حقيقي!":"جيّد! أعد المحاولة لتتقن أكثر"}</p><button class="btn" onclick="tfS()">العب مجدداً</button></div>`)}
+D2(`${BK}<h2>صح أم خطأ؟</h2><p class="mu">${i+1} / ${Q.length}</p><div class="card q">${Q[i][0]}</div><div class="two"><button class="btn" onclick="tfA(1)">✅ صح</button><button class="btn alt" onclick="tfA(0)">❌ خطأ</button></div><div id="fb"></div>`)}
+function tfA(v){const q=g.Q[g.i],ok=v==q[1];document.querySelectorAll(".two button").forEach(b=>b.disabled=true);if(ok){g.s++;add(5)}$("fb").innerHTML=`<div class="card ${ok?"good":"bad"}"><b>${ok?"إجابة صحيحة 👏":"ليس تماماً 🤔"}</b><p>${q[2]}</p><button class="btn" onclick="g.i++;tfR()">التالي</button></div>`}
+
+function qzS(t){g={t,Q:QZ[t].q,i:0,s:0};qzR()}
+function qzR(){const{Q,i,s,t}=g;if(i>=Q.length){const f=s==Q.length;if(f)add(10);S.stat["q"+t]=Math.max(S.stat["q"+t]||0,s);sv();return D2(`${BK}<div class="card c"><div class="big">${f?"🏅":"👏"}</div><h2>${s} من ${Q.length}</h2><p>${f?"علامة كاملة! +10 نقاط مكافأة":"أحسنت! أعد المحاولة لتتقن أكثر"}</p><button class="btn" onclick="qzS(${t})">إعادة الاختبار</button><button class="btn alt" onclick="go('g')">اختبار آخر</button></div>`)}
+const q=Q[i];D2(`${BK}<h2>${QZ[t].n}</h2><p class="mu">سؤال ${i+1} من ${Q.length} — كل إجابة صحيحة 5 نقاط</p><div class="card q">${q[0]}</div>${q[1].map((o,j)=>`<button class="opt" onclick="qzA(${j},this)">${o}</button>`).join("")}<div id="fb"></div>`)}
+function qzA(j,b){const q=g.Q[g.i],ok=j==q[2];document.querySelectorAll(".opt").forEach((x,k)=>{x.disabled=true;if(k==q[2])x.classList.add("good")});if(ok){g.s++;add(5)}else b.classList.add("bad");$("fb").innerHTML=`<div class="card"><p>${q[3]}</p><button class="btn" onclick="g.i++;qzR()">${g.i+1<g.Q.length?"التالي":"النتيجة"}</button></div>`}
+
+const rp=()=>Math.floor(Math.random()*HU.length);
+function huS(){g={sc:0,t:25,c:Array.from({length:9},()=>rp())};clearInterval(T);huR();T=setInterval(()=>{g.t--;if(g.t<=0){clearInterval(T);huEnd()}else{const e=$("ht");if(e)e.textContent=g.t}},1000)}
+function huR(){D2(`${BK}<h2>صيد المعلومات</h2><p class="mu">اصطد الحقائق ✅ وتجنّب الخرافات ❌</p><div class="hud"><span>⏱️ <b id="ht">${g.t}</b></span><span>⭐ <b>${g.sc}</b></span></div><div class="grid3">${g.c.map((x,k)=>`<button class="cd" onclick="huT(${k})">${HU[x][0]}</button>`).join("")}</div>`,1)}
+function huT(k){if(g.t<=0)return;const x=HU[g.c[k]];g.sc+=x[1]?1:-1;tst(x[1]?"✅ حقيقة":"❌ خرافة!",600);g.c[k]=rp();huR()}
+function huEnd(){const s=Math.max(0,g.sc);S.stat.hunt=Math.max(S.stat.hunt||0,s);add(s*2);D2(`${BK}<div class="card c"><div class="big">🎯</div><h2>اصطدت ${s} حقيقة</h2><p>${s>=8?"صيّاد ماهر!":"حاول مجدداً وكن أسرع"}</p><button class="btn" onclick="huS()">العب مجدداً</button></div>`)}
+
+function lgS(m){g={m};D2(`${BK}<h2>رحلة الرئة</h2><div class="seg"><button class="${m?"":"on"}" onclick="lgS(0)">🚬 مع التدخين</button><button class="${m?"on":""}" onclick="lgS(1)">🌿 بعد الإقلاع</button></div><div class="card c" id="lw"></div><input type="range" min="0" max="${m?7:3}" value="0" oninput="lgU(+this.value)" aria-label="مراحل الرحلة"><div class="card" id="lt"></div><small>معلومات تقريبية للتوعية وتختلف من شخص لآخر (WHO، CDC، ACS).</small><button class="btn" onclick="lgD()">أنهيت الرحلة ✅</button>`);lgU(0)}
+function lgU(v){const m=g.m,L=m?LR:LS,d=m?1-v/7*.9:[0,.35,.65,1][v];$("lw").innerHTML=lung(d,170)+"<h3>"+(m?"بعد الإقلاع: ":"")+L[v][0]+"</h3>";$("lt").textContent=L[v][1]}
+function lgD(){if(!S.stat.lung){S.stat.lung=1;add(10)}else tst("رحلة موفّقة! 🫁");go("g")}
+
+function breathe(){let on=1;M(`<h3 class="c">🌬️ تمرين التنفّس</h3><div class="bc" id="bc"></div><p class="c" id="bt">استعدّ… اجلس باسترخاء</p>`,()=>on=0);const P=[["شهيق من الأنف…",4,1.35],["احبس نفسك…",2,1.35],["زفير بطيء من الفم…",6,.8]];let i=0;const st=()=>{if(!on)return;if(i>=9){$("bt").textContent="أحسنت! نفس جديد 🌿";ch(0);return}const p=P[i%3],c=$("bc");$("bt").textContent=p[0];c.style.transition="transform "+p[1]+"s ease-in-out";c.style.transform="scale("+p[2]+")";i++;setTimeout(st,p[1]*1000)};setTimeout(st,1200)}
+function cp(){const t="أحتاج دعمك للابتعاد عن التدخين. هل يمكننا التحدث اليوم؟";try{navigator.clipboard.writeText(t).then(()=>tst("تم النسخ ✅"),()=>tst(t,6000))}catch(e){tst(t,6000)}}
+function help(){M(`<h3>🆘 أنا محتاج مساعدة</h3><p class="mu">أنت لست وحدك، وطلب المساعدة قوة. جرّب بالترتيب:</p><ol><li><b>خذ نفساً عميقاً</b><br><button class="btn sm" onclick="cm();breathe()">ابدأ تمرين التنفّس</button></li><li><b>تحدّث مع شخص تثق به:</b> أحد الوالدين أو صديق أو معلّم.<br><button class="btn alt sm" onclick="cp()">📋 انسخ رسالة جاهزة</button></li><li><b>راجع طبيباً أو صيدلانياً أو عيادة إقلاع</b> لوضع خطة تناسب حالتك.</li><li><b>ابحث عن خط الدعم الرسمي</b> للإقلاع أو الصحة النفسية في بلدك، أو ابدأ من <a href="https://www.who.int/news-room/fact-sheets/detail/tobacco" target="_blank" rel="noopener">صفحة WHO</a>.</li></ol><div class="note">⚠️ عند ألم في الصدر أو ضيق نفس شديد أو أي خطر على حياتك اتصل بالإسعاف فوراً. التطبيق للتوعية فقط ولا يقدّم تشخيصاً ولا أدوية.</div>`)}
+
+const aware=()=>AW.map(a=>`<details class="card"><summary><span class="ic">${a[0]}</span><b>${a[1]}</b><em>${a[2]}</em></summary><ul>${a[3].map(x=>`<li>${x}</li>`).join("")}</ul></details>`).join("")+`<details class="card"><summary><span class="ic">🔍</span><b>خرافات وحقائق</b></summary>${MY.map(m=>`<p><s>${m[0]}</s><br>✅ ${m[1]}</p>`).join("<hr>")}</details>`+SRC;
+const quit=()=>TP.map(t=>`<div class="card row"><span class="ic">${t[0]}</span><div><b>${t[1]}</b><br><small>${t[2]}</small></div></div>`).join("")+`<button class="btn" onclick="breathe()">🌬️ جرّب تمرين التنفّس الآن</button><button class="btn rdb" onclick="help()">🆘 أنا محتاج مساعدة</button>`+SRC;
+function learn(){return `<div class="seg"><button class="${tab?"":"on"}" onclick="tab=0;draw(learn)">📚 التوعية</button><button class="${tab?"on":""}" onclick="tab=1;draw(learn)">🚭 كيف تبتعد؟</button></div>${tab?quit():aware()}`}
+
+function comm(){if(!S.nick)S.nick=rm(NK);if(!S.seed){S.seed=1;S.posts.push(...SEED.map((p,i)=>({id:i+1,n:p[0],t:p[1],h:p[2]})))}sv();return `<h2>مجتمع نَفَس</h2><p class="mu">مساحة إيجابية للتشجيع بأسماء مستعارة. ممنوع التنمّر أو الترويج للتدخين أو مشاركة بيانات شخصية. المنشورات محفوظة على جهازك في هذه النسخة.</p><div class="card"><small>اسمك المستعار: <b>${esc(S.nick)}</b></small><textarea id="tx" maxlength="140" rows="2" placeholder="شارك إنجازاً أو شجّع غيرك…"></textarea><button class="btn" onclick="post()">نشر</button></div>`+S.posts.map(p=>`<div class="card"><div class="sp"><b>${esc(p.n)}</b><button class="ib" style="width:30px;height:30px;font-size:.8rem" onclick="rp2(${p.id})" aria-label="إخفاء">🚩</button></div><p>${esc(p.t)}</p><button class="btn sm ${p.m?"alt":""}" onclick="hrt(${p.id})">💚 شجّع ${p.h}</button></div>`).join("")}
+function post(){const t=$("tx").value.trim();if(t.length<3)return tst("اكتب رسالة أولاً");if(BAD.test(t))return tst("تعذّر النشر: التزم بالاحترام، ودون ترويج للتدخين أو أرقام وبيانات شخصية",4200);S.posts.unshift({id:Date.now(),n:S.nick,t,h:0});if(S.pd!==D){S.pd=D;add(3)}else sv();draw(comm)}
+function hrt(id){const p=S.posts.find(x=>x.id==id);if(p&&!p.m){p.m=1;p.h++;sv();draw(comm)}}
+function rp2(id){S.posts=S.posts.filter(x=>x.id!=id);sv();tst("تم إخفاء المنشور");draw(comm)}
+
+const dk=()=>S.th?S.th=="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+function thm(){S.th=dk()?"light":"dark";document.documentElement.dataset.theme=S.th;sv();$("tb").textContent=dk()?"☀️":"🌙";if(cur=="a")draw(ach)}
+function ntT(){S.nt.on=!S.nt.on;if(S.nt.on){try{Notification.requestPermission()}catch(e){}}sv();nsync();draw(ach)}
+function ping(t){const m=rm(NM);tst("🔔 "+m,4000);try{if(Notification.permission=="granted")new Notification("نَفَس جديد",{body:m})}catch(e){}if(!t){S.nt.d=D;sv()}}
+function nt(){if(LN||!S.nt.on||S.nt.d===D)return;const n=new Date(),t=("0"+n.getHours()).slice(-2)+":"+("0"+n.getMinutes()).slice(-2);if(t>=S.nt.t)ping()}
+function rst(){M(`<h3>مسح كل التقدم؟</h3><p>سيتم حذف النقاط والشارات والتحديات.</p><button class="btn" onclick="doR()">نعم، امسح</button><button class="btn alt" onclick="cm()">إلغاء</button>`)}
+function doR(){Object.assign(S,{pts:0,ch:{},streak:0,last:"",badges:[],stat:{}});sv();tp();cm();go("a")}
+function ach(){const l=lv();return `<div class="card hero c"><div class="big">${["🌱","🌿","💚","⚔️","🏆"][l.i]}</div><h2>${l.name}</h2><p>المستوى ${l.i+1} من 5 — ⭐ ${S.pts} نقطة</p><div class="bar"><i style="width:${l.pct}%"></i></div></div><div class="grid3 c"><div class="card"><b>${S.streak}</b><br><small>🔥 أيام متتالية</small></div><div class="card"><b>${S.badges.length}</b><br><small>🎖️ شارات</small></div><div class="card"><b>${Object.keys(S.ch).length}/5</b><br><small>🎯 تحديات اليوم</small></div></div><h3>لوحة الإنجازات</h3><div class="grid2">${B.map(b=>{const o=S.badges.includes(b[0]);return `<div class="card bd ${o?"":"lk"}"><div class="big">${o?b[1]:"🔒"}</div><b>${b[2]}</b><br><small>${b[3]}</small></div>`}).join("")}</div><h3>⚙️ الإعدادات</h3><div class="card"><div class="sp"><span>🌙 الوضع الليلي</span><button class="btn sm" onclick="thm()">${dk()?"إيقاف":"تشغيل"}</button></div><hr><div class="sp"><span>🔔 الإشعارات اليومية</span><button class="btn sm" onclick="ntT()">${S.nt.on?"إيقاف":"تشغيل"}</button></div>${S.nt.on?`<div class="sp"><span>وقت التذكير</span><input type="time" value="${S.nt.t}" onchange="S.nt.t=this.value;S.nt.d='';sv();nsync()"></div><button class="btn alt sm" onclick="ping(1)">جرّب إشعاراً</button>`:""}<p><small>${LN?"تصلك الإشعارات يومياً حتى والتطبيق مغلق.":"الإشعارات تظهر أثناء فتح التطبيق."} 🔒 بياناتك محفوظة على جهازك فقط ولا نجمع أي معلومات شخصية.</small></p><button class="btn alt sm" onclick="rst()">🗑️ إعادة ضبط التقدم</button></div>`}
+
+const LN=window.Capacitor&&Capacitor.Plugins&&Capacitor.Plugins.LocalNotifications;
+async function nsync(){if(!LN)return;try{const I=[1,2,3,4,5,6,7];await LN.cancel({notifications:I.map(id=>({id}))});if(!S.nt.on||(await LN.requestPermissions()).display!=="granted")return;const[h,m]=S.nt.t.split(":").map(Number);await LN.schedule({notifications:I.map(w=>({id:w,title:"نفس جديد",body:NM[(w-1)%NM.length],schedule:{on:{weekday:w,hour:h,minute:m},allowWhileIdle:true}}))})}catch(e){}}
+const V={h:home,g:games,l:learn,c:comm,a:ach};
+if(S.th)document.documentElement.dataset.theme=S.th;
+$("tb").textContent=dk()?"☀️":"🌙";
+chk();sv();tp();go("h");nsync();setTimeout(nt,2500);setInterval(nt,30000);
+</script>
+</body>
+</html>
